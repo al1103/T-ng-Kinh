@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./63841095088670.png" />
+    <title>Tụng Kinh</title>
+  </head>
+  <body>
+    <style>
+      button {
+        margin: 10px;
+        width: 170px;
+        height: 170px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      }
+      button:active {
+        animation: press 0.1s ease;
+      }
+
+      @keyframes press {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80%;
+      }
+      button img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .active {
+        animation: press 0.1s ease;
+      }
+      body {
+        background-color: rgb(196, 196, 196);
+        font-family: "Courier New", Courier, monospace;
+        margin: 0;
+        padding: 20px 50px;
+        height: 90vh;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      #random-text {
+        font-size: 1rem;
+        color: #000000;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+      }
+      .text {
+        font-size: 1.5rem;
+        color: #000000;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+    </style>
+    <div>
+      <h1 class="text">
+        Công đức vô lượng - Pháp bảo vô biên - Tâm bất diệt - Tánh vô ngại
+      </h1>
+    </div>
+    <div class="icon">
+      <div style="display: flex; margin-bottom: 100px">
+        <h1 id="random-text"></h1>
+      </div>
+      <div>
+        <button id="btn-1">
+          <img src="./Mõ.png" alt="" />
+        </button>
+        <audio src="./mo.mp3" class="sound"></audio>
+        <button id="btn-2">
+          <img src="./chuôngchua.png" alt="" />
+        </button>
+        <audio src="./chuong.mp3" class="sound2"></audio>
+      </div>
+      <div
+        style="
+          text-align: center;
+          position: absolute;
+          bottom: 5px;
+          border: 1px solid black;
+          padding: 20px;
+          background-color: rgb(255 255 255 / 30%);
+          backdrop-filter: blur(10px);
+        "
+      >
+        <span>Hướng dẫn sử dụng </span>
+        <p>Ấn vào biểu tượng ↑ trên bàn phím để gõ mõ</p>
+        <p>Ấn vào biểu tượng ↓ trên bàn phím để gõ chuông</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
